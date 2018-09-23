@@ -1,0 +1,4 @@
+export const DESELECT_ITEM = 'DESELECT_ITEM';
+export const SELECT_ITEM = 'SELECT_ITEM';
+export const SELECT_ITEM_TYPE = 'SELECT_ITEM_TYPE';
+export const SELECT_SIDE = 'SELECT_SIDE';
