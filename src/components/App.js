@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Grid, Cell } from 'styled-css-grid';
 
 import ItemSelectorContainer from '../containers/ItemSelectorContainer';
+import RoundsContainer from '../containers/RoundsContainer';
 
 const App = () => (
   <Container>
@@ -12,7 +13,7 @@ const App = () => (
         <ItemSelectorContainer/>
       </Cell>
       <Cell width={1}>
-        List
+        <RoundsContainer/>
       </Cell>
     </Grid>
   </Container>

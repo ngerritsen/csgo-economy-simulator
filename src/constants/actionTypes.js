@@ -2,3 +2,7 @@ export const DESELECT_ITEM = 'DESELECT_ITEM';
 export const SELECT_ITEM = 'SELECT_ITEM';
 export const SELECT_ITEM_TYPE = 'SELECT_ITEM_TYPE';
 export const SELECT_SIDE = 'SELECT_SIDE';
+
+export const REMOVE_LAST_ROUND = 'REMOVE_LAST_ROUND';
+export const CLEAR_ROUNDS = 'CLEAR_ROUNDS';
+export const ADD_ROUND = 'ADD_ROUND';
