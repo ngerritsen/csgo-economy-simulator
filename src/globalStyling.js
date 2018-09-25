@@ -24,4 +24,8 @@ injectGlobal`
   button {
     cursor: pointer;
   }
+
+  img {
+    width: 100%;
+  }
 `;

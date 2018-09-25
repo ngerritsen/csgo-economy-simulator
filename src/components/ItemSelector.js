@@ -4,9 +4,11 @@ import { Margin } from 'styled-components-spacing';
 import styled from 'styled-components';
 import { Grid, Cell } from 'styled-css-grid';
 
-import { Item } from '../propTypes';
+import { Item as ItemPropType } from '../propTypes';
 import itemTypes from '../constants/itemTypes';
 import sides from '../constants/sides';
+
+import Item from './Item';
 
 const ItemSelector = ({
   deselectItem,
@@ -44,15 +46,10 @@ const ItemSelector = ({
     </Margin>
     <Margin top={2}>
       <Grid columns={4}>
-        {selectableItems.map(({ name, cost, id }) => (
-          <Cell key={id}>
-            <SelectableBox onClick={() => selectItem(id)}>
-              <Margin>
-                {name}
-              </Margin>
-              <Margin top={1}>
-                <Cost>${cost}</Cost>
-              </Margin>
+        {selectableItems.map(item  => (
+          <Cell key={item.id}>
+            <SelectableBox onClick={() => selectItem(item.id)}>
+              <Item item={item}/>
             </SelectableBox>
           </Cell>
         ))}
@@ -87,8 +84,8 @@ const ItemSelector = ({
 
 ItemSelector.propTypes = {
   deselectItem: PropTypes.func.isRequired,
-  selectableItems: PropTypes.arrayOf(Item).isRequired,
-  selectedItems: PropTypes.arrayOf(Item).isRequired,
+  selectableItems: PropTypes.arrayOf(ItemPropType).isRequired,
+  selectedItems: PropTypes.arrayOf(ItemPropType).isRequired,
   selectedItemType: PropTypes.string.isRequired,
   selectItem: PropTypes.func.isRequired,
   selectItemType: PropTypes.func.isRequired,
@@ -96,11 +93,6 @@ ItemSelector.propTypes = {
   side: PropTypes.string.isRequired,
   submit: PropTypes.func.isRequired
 }
-
-const Cost = styled.span`
-  color: ${p => p.theme.colors.subtle};
-  font-size: 0.9em;
-`;
 
 const ConfirmationButton = styled.button`
   background: ${p => p.theme.colors[p.type]};

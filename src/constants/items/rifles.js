@@ -78,7 +78,7 @@ export default [
     id: 'ssg-08',
     name: 'SSG 08',
     type: RIFLE,
-    sides: [CT],
+    sides: [CT, T],
     cost: 1700,
     killReward: 300
   },
