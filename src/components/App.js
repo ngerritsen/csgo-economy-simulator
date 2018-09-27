@@ -1,33 +1,30 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Grid, Cell } from 'styled-css-grid';
 
 import ItemSelectorContainer from '../containers/ItemSelectorContainer';
 import RoundsContainer from '../containers/RoundsContainer';
 
 const App = () => (
-  <Container>
-    <Title>CS:GO Economy Simulator</Title>
-    <Grid columns={3}>
-      <Cell width={2}>
-        <ItemSelectorContainer/>
-      </Cell>
-      <Cell width={1}>
-        <RoundsContainer/>
-      </Cell>
-    </Grid>
-  </Container>
+  <div>
+    <div className="hero is-small is-light">
+      <div className="hero-body">
+        <div className="container is-fluid is-widescreen">
+          <h1 className="title is-4">CS:GO Economy Simulator</h1>
+        </div>
+      </div>
+    </div>
+    <div className="section">
+      <div className="container is-fluid is-widescreen">
+        <div className="columns">
+          <div className="column is-8">
+            <ItemSelectorContainer />
+          </div>
+          <div className="column is-4">
+            <RoundsContainer />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 );
-
-const Container = styled.div`
-  max-width: 124rem;
-  margin: 0 auto;
-  padding: 0 ${p => p.theme.spacing[2]};
-`;
-
-const Title = styled.h1`
-  font-size: 1.8em;
-  margin-bottom: ${p => p.theme.spacing[4]};
-`;
 
 export default App;

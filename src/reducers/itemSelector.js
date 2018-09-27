@@ -1,11 +1,12 @@
 import { mapReducers } from 'redux-map-reducers';
 
 import { T } from '../constants/sides';
+import { PISTOL } from '../constants/itemTypes';
 import * as actionTypes from '../constants/actionTypes';
 
 const initialState = {
   selectedItems: [],
-  itemType: '',
+  itemType: PISTOL,
   side: T
 };
 
@@ -22,28 +23,28 @@ function deselectItem(state, action) {
   return {
     ...state,
     selectedItems: state.selectedItems.filter((_, i) => i !== index)
-  }
+  };
 }
 
 function selectItemType(state, action) {
   return {
     ...state,
     itemType: action.itemType
-  }
+  };
 }
 
 function selectItem(state, action) {
   return {
     ...state,
     selectedItems: [...state.selectedItems, action.id]
-  }
+  };
 }
 
 function selectSide(state, action) {
   return {
     ...state,
     side: action.side
-  }
+  };
 }
 
 export default mapReducers(reducerMap, initialState);
