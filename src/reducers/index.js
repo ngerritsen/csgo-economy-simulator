@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
-import itemSelectorReducer from './itemSelector';
+import buyReducer from './buy';
 import roundsReducer from './rounds';
+import sideReducer from './side';
 
 export default combineReducers({
-  itemSelector: itemSelectorReducer,
-  rounds: roundsReducer
+  buy: buyReducer,
+  rounds: roundsReducer,
+  side: sideReducer
 });

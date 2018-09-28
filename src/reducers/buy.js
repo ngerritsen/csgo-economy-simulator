@@ -1,20 +1,17 @@
 import { mapReducers } from 'redux-map-reducers';
 
-import { T } from '../constants/sides';
 import { PISTOL } from '../constants/itemTypes';
 import * as actionTypes from '../constants/actionTypes';
 
 const initialState = {
   selectedItems: [],
-  itemType: PISTOL,
-  side: T
+  itemType: PISTOL
 };
 
 const reducerMap = {
   [actionTypes.DESELECT_ITEM]: deselectItem,
   [actionTypes.SELECT_ITEM_TYPE]: selectItemType,
-  [actionTypes.SELECT_ITEM]: selectItem,
-  [actionTypes.SELECT_SIDE]: selectSide
+  [actionTypes.SELECT_ITEM]: selectItem
 };
 
 function deselectItem(state, action) {
@@ -37,13 +34,6 @@ function selectItem(state, action) {
   return {
     ...state,
     selectedItems: [...state.selectedItems, action.id]
-  };
-}
-
-function selectSide(state, action) {
-  return {
-    ...state,
-    side: action.side
   };
 }
 

@@ -19,31 +19,36 @@ export default [
   {
     type: WIN,
     name: 'Win',
-    teamReward: 3250,
+    reward: 3250,
+    positive: true,
     sides: [T, CT]
   },
   {
     type: WIN_DETONATION,
     name: 'Win + detonation',
-    teamReward: 3500,
+    reward: 3500,
+    positive: true,
     sides: [T]
   },
   {
     type: WIN_DEFUSE,
     name: 'Win + defusal',
-    teamReward: 3500,
+    reward: 3500,
+    positive: true,
     sides: [CT]
   },
   {
     type: LOSE,
     name: 'Lose',
-    teamReward: 1400,
+    reward: 1400,
+    positive: false,
     sides: [T, CT]
   },
   {
     type: LOSE_PLANT,
     name: 'Lose + plant',
-    teamReward: 2200,
+    reward: 2200,
+    positive: false,
     sides: [T]
   }
 ];
@@ -99,4 +104,4 @@ export const individualEvents = [
     reward: 300,
     name: 'Bomb defuse'
   }
-]
+];

@@ -1,2 +1,2 @@
-export const START_MONEY = '800';
-export const MAX_MONEY = '16000';
+export const START_MONEY = 800;
+export const MAX_MONEY = 16000;

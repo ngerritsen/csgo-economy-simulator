@@ -3,9 +3,10 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
+    'plugin:prettier/recommended'
   ],
-  plugins: ['react'],
+  plugins: ['react', 'prettier'],
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module',
@@ -16,5 +17,8 @@ module.exports = {
   },
   env: {
     browser: true
+  },
+  rules: {
+    'prettier/prettier': [error, { singleQuote: true }]
   }
 };

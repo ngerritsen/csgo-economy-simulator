@@ -1,26 +1,20 @@
 import React from 'react';
 
-import ItemSelectorContainer from '../containers/ItemSelectorContainer';
-import RoundsContainer from '../containers/RoundsContainer';
+import BuyMenuContainer from '../containers/BuyMenuContainer';
+import BuyStatusContainer from '../containers/BuyStatusContainer';
+import SideSelectorContainer from '../containers/SideSelectorContainer';
 
 const App = () => (
-  <div>
-    <div className="hero is-small is-light">
-      <div className="hero-body">
-        <div className="container is-fluid is-widescreen">
-          <h1 className="title is-4">CS:GO Economy Simulator</h1>
+  <div className="section">
+    <div className="container is-fluid is-widescreen">
+      <h1 className="title is-4">CS:GO Economy Simulator</h1>
+      <div className="columns">
+        <div className="column is-8">
+          <SideSelectorContainer />
+          <BuyMenuContainer />
         </div>
-      </div>
-    </div>
-    <div className="section">
-      <div className="container is-fluid is-widescreen">
-        <div className="columns">
-          <div className="column is-8">
-            <ItemSelectorContainer />
-          </div>
-          <div className="column is-4">
-            <RoundsContainer />
-          </div>
+        <div className="column is-4">
+          <BuyStatusContainer />
         </div>
       </div>
     </div>
